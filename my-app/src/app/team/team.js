@@ -1,6 +1,6 @@
 
 
-export default function Page (props) {
+export default function Team (props) {
     return (
         <div id="team" className="text-center">
             <div className="container">

@@ -1,4 +1,5 @@
 
+import Image from "@/app/image";
 
 export default function  Gallery (props) {
     return (

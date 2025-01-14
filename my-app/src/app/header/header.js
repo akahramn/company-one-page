@@ -12,7 +12,6 @@ export default function Header (props) {
                         <div className="row">
                             <div className="col-md-8 col-md-offset-2 intro-text">
                                 <h1>
-                                    We are a Landing Page
                                     {props.data ? props.data.title : "Loading"}
                                     <span></span>
                                 </h1>

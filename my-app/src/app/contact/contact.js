@@ -1,3 +1,4 @@
+'use client'
 import {useState} from "react";
 
 const initialState = {
@@ -6,7 +7,7 @@ const initialState = {
     message: "",
 };
 
-export default function Page(props) {
+export default function Contact(props) {
     const [{ name, email, message }, setState] = useState(initialState);
 
     const handleChange = (e) => {

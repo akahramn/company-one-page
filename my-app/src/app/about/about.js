@@ -1,13 +1,18 @@
+'use client'
+import {useEffect} from "react";
 
+export default function About(props) {
 
-export default function Page(props) {
+    useEffect(() => {
+        console.log("About", props);
+    }, []);
+
     return (
         <div id="about">
             <div className="container">
                 <div className="row">
                     <div className="col-xs-12 col-md-6">
-                        {" "}
-                        <img src="img/about.jpg" className="img-responsive" alt=""/>{" "}
+                        <img src={"/img/about.jpg"} className="img-responsive" alt={""}/>
                     </div>
                     <div className="col-xs-12 col-md-6">
                         <div className="about-text">

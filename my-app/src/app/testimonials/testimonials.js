@@ -1,7 +1,7 @@
 
 
 
-export default function Page(props) {
+export default function Testimonials(props) {
     return (
         <div id="testimonials">
             <div className="container">

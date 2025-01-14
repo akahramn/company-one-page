@@ -1,8 +1,18 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/header/header";
-import JsonData from "@/data/data.json"
+import JsonData from "@/app/data/data.json"
 import Navigation from "@/app/navigation";
+import About from "@/app/about/about";
+import Features from "@/app/features/features";
+import Services from "@/app/services/services";
+import Gallery from "@/app/gallery/gallery";
+import Testimonials from "@/app/testimonials/testimonials";
+import Team from "@/app/team/team";
+import Contact from "@/app/contact/contact";
+import "bootstrap/dist/css/bootstrap.min.css"
+import AddBootstrap from "./addBootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +24,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const headerData = JSON.stringify( JsonData.Header );
+const jsonDataString = JSON.stringify( JsonData );
+const jsonData = JSON.parse( jsonDataString );
+
 
 export const metadata = {
   title: "Create Next App",
@@ -25,8 +37,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <AddBootstrap/>
         <Navigation/>
-        <Header data={headerData}/>
+        <Header data={jsonData.Header}/>
+        <Features data={jsonData.Features}/>
+        <About data={jsonData.About}/>
+        <Services data={jsonData.Services}/>
+        <Gallery data={jsonData.Gallery}/>
+        <Testimonials data={jsonData.Testimonials}/>
+        <Team data={jsonData.Team}/>
+        <Contact data={jsonData.Contact}/>
         {children}
       </body>
     </html>

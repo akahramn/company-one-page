@@ -1,4 +1,4 @@
-
+'use client'
 
 export default function Navigation(props) {
     return (
@@ -17,7 +17,7 @@ export default function Navigation(props) {
                         <span className="icon-bar"></span>{" "}
                         <span className="icon-bar"></span>{" "}
                     </button>
-                    <a className="navbar-brand page-scroll" href="#page-top">
+                    <a className="navbar-brand page-scroll" href="#header">
                         React Landing Page
                     </a>{" "}
                 </div>
