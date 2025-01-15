@@ -1,5 +1,6 @@
 'use client'
 import {useEffect} from "react";
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 export default function About(props) {
 

@@ -9,59 +9,66 @@ html {
   height: 100% !important;
   scroll-behavior: smooth;
 }
+
 h2,
 h3,
 h4 {
   font-family: "Raleway", sans-serif;
 }
+
 h2 {
   text-transform: uppercase;
-  margin: 0 0 20px;
+  margin-bottom: 20px;
   font-weight: 800;
   font-size: 36px;
   color: #333;
 }
+
 h3 {
   font-size: 20px;
   font-weight: 600;
   color: #333;
 }
+
 h4 {
   font-size: 18px;
   color: #333;
   font-weight: 600;
 }
+
 h5 {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 20px;
 }
+
 p {
   font-size: 15px;
 }
+
 p.intro {
-  margin: 12px 0 0;
+  margin-top: 12px;
   line-height: 24px;
 }
+
 a {
   color: #608dfd;
   font-weight: 400;
 }
+
 a:hover,
 a:focus {
   text-decoration: none;
   color: #608dfd;
 }
+
 ul,
 ol {
   list-style: none;
-}
-ul,
-ol {
   padding: 0;
-  webkit-padding: 0;
-  moz-padding: 0;
+  margin: 0;
 }
+
 hr {
   height: 2px;
   width: 70px;
@@ -71,6 +78,7 @@ hr {
   margin-bottom: 20px;
   border: 0;
 }
+
 /* Navigation */
 #menu {
   padding: 15px;
@@ -249,29 +257,53 @@ header .intro-text {
 }
 #features i.fa {
   font-size: 38px;
-  margin-bottom: 20px;
-  transition: all 0.5s;
   color: #fff;
+
+  /* Daire boyutu ve şekli */
   width: 100px;
   height: 100px;
-  padding: 30px 0;
   border-radius: 50%;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+
+  /* İçeriği tam ortalama */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Alt boşluk ve animasyon */
+  margin: 0 auto 20px;
+  transition: all 0.5s ease-in-out;
 }
+
+/* Hover efekti */
+#features i.fa:hover {
+  transform: scale(1.1); /* Hafif büyütme */
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge */
+}
+
 /* About Section */
 #about {
   padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
 #about h3 {
   font-size: 22px;
   margin: 0 0 20px;
 }
+
 #about h2 {
   position: relative;
   margin-bottom: 15px;
   padding-bottom: 15px;
+  font-size: 28px;
+  font-weight: bold;
 }
+
 #about h2::after {
   position: absolute;
   content: "";
@@ -279,32 +311,57 @@ header .intro-text {
   height: 4px;
   width: 60px;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+#about .about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 #about .about-text li {
-  margin-bottom: 6px;
-  margin-left: 6px;
+  margin-bottom: 10px;
   list-style: none;
-  padding: 0;
+  padding-left: 20px;
+  position: relative;
 }
+
+#about .about-text li {
+  position: relative;
+  padding-left: 25px; /* Tik işaretine yer açmak için */
+}
+
 #about .about-text li:before {
-  content: "\f00c";
-  font-family: "FontAwesome";
+  content: "";
+  font-size: 14px;
   color: #5ca9fb;
-  font-size: 11px;
-  font-weight: 300;
-  padding-right: 8px;
+  position: absolute;
+  left: 0;
+  top: 2px;
 }
+
+#about .about-text li:before {
+  content: "\2713"; /* Tik işareti (check2-circle) */
+}
+
+
 #about img {
-  width: 520px;
-  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
   background: #fff;
-  border-right: 0;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 #about p {
-  line-height: 24px;
+  line-height: 1.6;
   margin: 30px 0;
+  font-size: 16px;
+  color: #555;
 }
 /* Services Section */
 #services {
@@ -312,76 +369,112 @@ header .intro-text {
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: #fff;
 }
-#services .service-desc {
-  margin: 10px 10px 20px;
+
+#services .section-title {
+  text-align: center;
+  margin-bottom: 50px;
 }
-#services h2 {
+
+#services .section-title h2 {
+  position: relative;
   color: #fff;
+  font-size: 36px;
+  margin-bottom: 15px;
 }
+
 #services .section-title h2::after {
-  position: absolute;
   content: "";
+  position: absolute;
   background: rgba(255, 255, 255, 0.3);
   height: 4px;
   width: 60px;
   bottom: 0;
-  margin-left: -30px;
   left: 50%;
+  transform: translateX(-50%);
 }
+
+#services .service-desc {
+  margin: 20px 15px 40px;
+  text-align: center;
+}
+
 #services i.fa {
-  font-size: 42px;
-  width: 120px;
-  height: 120px;
-  padding: 40px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-  border-radius: 50%;
+  font-size: 38px;
   color: #fff;
+
+  /* Daire boyutu ve şekli */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+
+  /* İçeriği tam ortalama */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Alt boşluk ve animasyon */
+  margin: 0 auto 20px;
+  transition: all 0.5s ease-in-out;
 }
+
+/* Hover efekti */
+#services i.fa:hover {
+  transform: scale(1.1); /* Hafif büyütme */
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge */
+}
+
 #services h3 {
   font-weight: 500;
-  padding: 5px 0;
+  margin: 10px 0 5px;
   color: #fff;
+  font-size: 20px;
 }
+
 #services p {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  line-height: 1.6;
 }
-#services .service-desc {
-  margin-bottom: 40px;
+
+#services .service-desc:hover i.fa {
+  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  transform: scale(1.2);
 }
+
 /* Portfolio Section */
 #portfolio {
   padding: 100px 0;
 }
+
 .portfolio-item {
   margin: 1px -15px 0 -14px;
   padding: 0;
 }
+
 .portfolio-item .hover-bg {
   overflow: hidden;
   position: relative;
   margin: 0;
 }
+
 .hover-bg .hover-text {
   position: absolute;
   text-align: center;
   margin: 0 auto;
   color: #fff;
-  background: linear-gradient(
-          to right,
-          rgba(99, 114, 255, 0.8) 0%,
-          rgba(92, 169, 251, 0.8) 100%
-  );
+  background: linear-gradient(to right, rgba(99, 114, 255, 0.8) 0%, rgba(92, 169, 251, 0.8) 100%);
   padding: 30% 0 0;
   height: 100%;
   width: 100%;
   opacity: 0;
   transition: all 0.5s;
 }
+
 .hover-bg .hover-text > h4 {
   opacity: 0;
   color: #fff;
-  -webkit-transform: translateY(100%);
   transform: translateY(100%);
   transition: all 0.3s;
   font-size: 18px;
@@ -389,15 +482,17 @@ header .intro-text {
   font-weight: 500;
   text-transform: uppercase;
 }
+
 .hover-bg:hover .hover-text > h4 {
   opacity: 1;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateY(0);
   transform: translateY(0);
+  -webkit-backface-visibility: hidden;
 }
+
 .hover-bg:hover .hover-text {
   opacity: 1;
 }
+
 /* Testimonials Section */
 #testimonials {
   padding: 100px 0;
@@ -442,38 +537,46 @@ header .intro-text {
 #team {
   padding: 100px 0;
 }
+
 #team h4 {
   margin: 5px 0;
 }
+
 #team .team-img {
   width: 240px;
 }
+
 #team .thumbnail {
   background: transparent;
-  border: 0;
+  border: none;
 }
+
 #team .thumbnail .caption {
-  padding: 10px 0 0;
+  padding-top: 10px;
   color: #888;
 }
+
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: rgba(255, 255, 255, 0.75);
 }
+
 #contact .section-title {
   margin-bottom: 40px;
 }
+
 #contact .section-title p {
   font-size: 16px;
 }
+
 #contact h2 {
   color: #fff;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin: 10px 0 15px;
   padding-bottom: 15px;
 }
+
 #contact .section-title h2::after {
   position: absolute;
   content: "";
@@ -483,35 +586,41 @@ header .intro-text {
   bottom: 0;
   left: 30px;
 }
+
 #contact h3 {
   color: #fff;
-  margin-top: 80px;
-  margin-bottom: 25px;
+  margin: 80px 0 25px;
   padding-bottom: 20px;
   font-weight: 400;
 }
+
 #contact form {
   padding-top: 20px;
 }
+
 #contact .text-danger {
   color: #cc0033;
   text-align: left;
 }
+
 #contact .btn-custom {
   margin: 30px 0;
   background: transparent;
   border: 2px solid #fff;
 }
+
 #contact .btn-custom:hover {
   color: #1f386e;
   background: #fff;
 }
+
 label {
   font-size: 12px;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
   float: left;
 }
+
 #contact .form-control {
   display: block;
   width: 100%;
@@ -520,54 +629,48 @@ label {
   line-height: 1.42857143;
   color: #444;
   background-color: #fff;
-  background-image: none;
   border: 1px solid #ddd;
   border-radius: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
+
 #contact .form-control:focus {
   border-color: #999;
   outline: 0;
-  -webkit-box-shadow: transparent;
   box-shadow: transparent;
 }
-.form-control::-webkit-input-placeholder {
+
+.form-control::placeholder {
   color: #777;
 }
-.form-control:-moz-placeholder {
-  color: #777;
-}
-.form-control::-moz-placeholder {
-  color: #777;
-}
-.form-control:-ms-input-placeholder {
-  color: #777;
-}
+
 #contact .contact-item {
   margin: 20px 0;
 }
+
 #contact .contact-item span {
-  color: rgba(255, 255, 255, 1);
+  color: #fff;
   margin-bottom: 10px;
   display: block;
 }
+
 #contact .contact-item i.fa {
   margin-right: 10px;
 }
+
 #contact .social {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 50px;
   margin-top: 50px;
   text-align: center;
 }
+
 #contact .social ul li {
   display: inline-block;
   margin: 0 20px;
 }
+
 #contact .social i.fa {
   font-size: 22px;
   width: 48px;
@@ -578,22 +681,27 @@ label {
   border-radius: 50%;
   transition: all 0.3s;
 }
+
 #contact .social i.fa:hover {
   color: #608dfd;
   background: #fff;
 }
+
 /* Footer Section*/
 #footer {
   background: #f6f6f6;
   padding: 30px 0;
 }
+
 #footer p {
   color: #888;
   font-size: 14px;
 }
+
 #footer a {
   color: #608dfd;
 }
+
 #footer a:hover {
   border-bottom: 2px solid #608dfd;
 }
@@ -603,3 +711,4 @@ label {
     margin: 50px 0;
   }
 }
+

@@ -1,18 +1,19 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/app/header/header";
+import Header from "@/app/components/header/header";
 import JsonData from "@/app/data/data.json"
 import Navigation from "@/app/navigation";
-import About from "@/app/about/about";
-import Features from "@/app/features/features";
-import Services from "@/app/services/services";
-import Gallery from "@/app/gallery/gallery";
-import Testimonials from "@/app/testimonials/testimonials";
-import Team from "@/app/team/team";
-import Contact from "@/app/contact/contact";
+import About from "@/app/components/about/about";
+import Features from "@/app/components/features/features";
+import Services from "@/app/components/services/services";
+import Gallery from "@/app/components/gallery/gallery";
+import Testimonials from "@/app/components/testimonials/testimonials";
+import Team from "@/app/components/team/team";
+import Contact from "@/app/components/contact/contact";
 import "bootstrap/dist/css/bootstrap.min.css"
-import AddBootstrap from "./addBootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css"
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <AddBootstrap/>
         <Navigation/>
         <Header data={jsonData.Header}/>
         <Features data={jsonData.Features}/>
@@ -47,7 +47,6 @@ export default function RootLayout({ children }) {
         <Testimonials data={jsonData.Testimonials}/>
         <Team data={jsonData.Team}/>
         <Contact data={jsonData.Contact}/>
-        {children}
       </body>
     </html>
   );
